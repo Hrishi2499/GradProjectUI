@@ -1,0 +1,75 @@
+
+
+
+
+
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+   </head>
+   <body class="vh-100">
+     <div class="mx-auto col-5" style="margin-top: 10rem;">
+       <h1 class="text-center mb-3 text-secondary">Choose Date and Time</h1>
+   
+       <!-- <form>
+         <input class="form-control" type="datetime-local" placeholders="Select DateTime">
+       </form> -->
+       <form>
+         <label>From:</label>
+         <input class="form-control" type="date" id="inter" placeholders="Select DateTime" min="" max="">
+         <label>Till:</label>
+         <input class="form-control" type="date" id="inter1" placeholders="Select DateTime" min="" max="">
+         
+       </form>
+     </div>
+     
+     <!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+   
+     <script>
+       
+     
+     let FromDate=new Date();
+     let TillDate=new Date();
+       
+       FromDate.setDate(FromDate.getDate()+15);
+       TillDate.setDate(TillDate.getDate()+30);
+
+       let day=FromDate.getDate();
+       let month=FromDate.getMonth()+1;
+       let year=FromDate.getUTCFullYear();
+       console.log(day);
+
+       let day1=TillDate.getDate();
+       let month1=TillDate.getMonth()+1;
+       let year1=TillDate.getUTCFullYear();
+
+       if(month<10)
+        month="0"+month;
+       if(day<10)
+        day="0"+day;
+      let e=year+"-"+month+"-"+day;
+
+      if(month1<10)
+        month1="0"+month1;
+       if(day1<10)
+        day1="0"+day1;
+      let e1=year1+"-"+month1+"-"+day1;
+
+       document.getElementById("inter").setAttribute("max",e1);
+       document.getElementById("inter").setAttribute("min",e);
+       
+      
+      
+   
+   
+   
+   
+     </script>
+   </body>
+   </html>
