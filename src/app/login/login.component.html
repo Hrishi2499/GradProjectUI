@@ -1,0 +1,38 @@
+<section class="form">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class=" image col-lg-5">
+            <img [src]="myimage" class="img-fluid">
+        </div>
+        <div class=" login col-lg-7">
+          <h1>USER LOGIN PORTAL </h1>
+          <form class="form1 my-8 mx-6"> 
+          <div class="form-row">
+            <div class="col-lg-7">
+    <input type="email" class="form-control my-4 p-2" placeholder="Enter the User Id">
+            </div>
+            </div>
+            <div class="form-row">
+              <div class="col-lg-7">
+      <input type="password" class="form-control  my-4 p-2" placeholder="Enter the password" required>
+              </div>
+          </div>
+          <div class="form-row">
+            <div class="col-lg-7">
+    <button type="button" class="btn1  my-4 p-2" placeholder="password"  [routerLink]=" '/dashboard' " required>LOGIN</button>
+    <p class=" or horizontal-line-text">
+      <span>or</span>
+    </p>
+    <button type="button" class=" btn2 " (click)="signingoogle()">
+      <span>Google</span>
+    </button>
+            </div>
+          </div>
+        </form>
+        </div>
+        </div>
+    </div>
+        </section>
+        
+         
+          
