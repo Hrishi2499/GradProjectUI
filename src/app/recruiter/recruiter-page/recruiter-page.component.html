@@ -32,7 +32,7 @@
     
         <div class="container" id="filterContainer">
             <div class="container" >
-                <select class="customText" id="skillDropdown" onchange="getSkill()">
+                <select class="customText" id="skillDropdown" >
                     <option disabled hidden selected>SKILL</option>
                     <option value="JAVA">JAVA</option>
                     <option value="JAVASCRIPT">JAVASCRIPT</option>
@@ -40,7 +40,7 @@
             </div>
     
             <div class="container" >
-                <select class="customText" id="roundDropdown" onChange="getRound()">
+                <select class="customText" id="roundDropdown" >
                     <option disabled hidden selected>ROUND</option>
                     <option value="ROUND 1">ROUND 1</option>
                     <option value="ROUND 2">ROUND 2</option>
@@ -51,44 +51,22 @@
     
             <div class="container" id="fromContainer">
                 <div class="text" id="calendarLabel">From</div>
-                <input class="dateClass" type="date" id="fromDate" onChange="getFromDate()"> 
+                <input class="dateClass" type="date" id="fromDate" > 
             </div>
 
             <div class="container" id="toContainer">
                 <div class="text" id="calendarLabel">To</div>
-                <input class="dateClass" type="date" id="toDate" onChange="getToDate()"> 
+                <input class="dateClass" type="date" id="toDate" > 
             </div>
 
             
-            <button class="customText" id="searchButton" onclick="printFilter()">Search</button>
+            <button class="customText" id="searchButton" >Search</button>
         </div>
 
         <div class="container" id="lineSeparator"></div>
         <div class="container" id="printFilterContainer"></div>
 
     </div>
-
-    <script>
-        function getSkill(){
-            var selectedValue = document.getElementById("skillDropdown").value;
-            console.log(selectedValue);
-        }
-
-        function getRound(){
-            var selectedValue = document.getElementById("roundDropdown").value;
-            console.log(selectedValue);
-        }
-
-        function getFromDate(){ 
-           var selectedValue = document.getElementById("fromDate").value;
-           console.log(selectedValue);
-        }
-
-        function getToDate(){
-            var selectedValue = document.getElementById("toDate").value;
-            console.log(selectedValue);
-        }
-    </script>
 
 </body>
 </html>
