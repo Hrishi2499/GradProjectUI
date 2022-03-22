@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recruiter</title>
+</head>
+<body>
+
+    <div class="container" id="bodyContainer">
+        <div class="container" id="navigationContainer">
+            <button id="backButton">Back</button>
+            <button id="logoutButton">LOGOUT</button>
+        </div>
+
+        <div class="container" id="usernameContainer">
+            <div class="text" id="recruiterPageHeading">Recruiter PROFILE</div>
+            <div class="text" id="usernameText">HELLO USERNAME,</div>
+        </div>
+    
+        <div class="container" id="fourButtonsContainer">
+            <button class="customText" id="profileEditButton">Profile</button>
+            <button class="customText" id="downloadSlotsButton">Download Slot</button>
+            <button class="customText" id="slotViewButton">Slot view</button>
+            <button class="customText" id="downloadCandidateDetailsButton">Download Candidate Details</button>
+        </div>
+    
+        <div class="image" id="profileImageContainer">
+            <img src="../../../assets/images/userImage.png" alt="user profile image" id="profileImage">
+        </div>
+    
+        <div class="container" id="filterContainer">
+            <div class="container" >
+                <select class="customText" id="skillDropdown" onchange="getSkill()">
+                    <option disabled hidden selected>SKILL</option>
+                    <option value="JAVA">JAVA</option>
+                    <option value="JAVASCRIPT">JAVASCRIPT</option>
+                </select>
+            </div>
+    
+            <div class="container" >
+                <select class="customText" id="roundDropdown" onChange="getRound()">
+                    <option disabled hidden selected>ROUND</option>
+                    <option value="ROUND 1">ROUND 1</option>
+                    <option value="ROUND 2">ROUND 2</option>
+                    <option value="ROUND 3">ROUND 3</option>
+                    <option value="ROUND 4">ROUND 4</option>
+                </select>
+            </div>
+    
+            <div class="container" id="fromContainer">
+                <div class="text" id="calendarLabel">From</div>
+                <input class="dateClass" type="date" id="fromDate" onChange="getFromDate()"> 
+            </div>
+
+            <div class="container" id="toContainer">
+                <div class="text" id="calendarLabel">To</div>
+                <input class="dateClass" type="date" id="toDate" onChange="getToDate()"> 
+            </div>
+
+            
+            <button class="customText" id="searchButton" onclick="printFilter()">Search</button>
+        </div>
+
+        <div class="container" id="lineSeparator"></div>
+        <div class="container" id="printFilterContainer"></div>
+
+    </div>
+
+    <script>
+        function getSkill(){
+            var selectedValue = document.getElementById("skillDropdown").value;
+            console.log(selectedValue);
+        }
+
+        function getRound(){
+            var selectedValue = document.getElementById("roundDropdown").value;
+            console.log(selectedValue);
+        }
+
+        function getFromDate(){ 
+           var selectedValue = document.getElementById("fromDate").value;
+           console.log(selectedValue);
+        }
+
+        function getToDate(){
+            var selectedValue = document.getElementById("toDate").value;
+            console.log(selectedValue);
+        }
+    </script>
+
+</body>
+</html>
