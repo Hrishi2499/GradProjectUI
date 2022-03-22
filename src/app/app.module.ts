@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
  import { SocialAuthServiceConfig } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { RecruiterPageComponent } from './recruiter/recruiter-page/recruiter-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    RecruiterPageComponent
   ],
   imports: [
     BrowserModule,
