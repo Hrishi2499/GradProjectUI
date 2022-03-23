@@ -13,6 +13,15 @@ import { SlotListComponent } from './slot-list/slot-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
 import { CandidateComponent } from './candidate/candidate.component';
+import { NavbarComponent } from './interviewer/navbar/navbar.component';
+
+import { RouterModule } from '@angular/router';
+
+import { ProvideslotsComponent } from './interviewer/provideslots/provideslots.component';
+import { IncentivesComponent } from './interviewer/incentives/incentives.component';
+import { ViewslotsComponent } from './interviewer/viewslots/viewslots.component';
+//import { IncentivesComponent } from './interviewer/incentives/incentives.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +29,13 @@ import { CandidateComponent } from './candidate/candidate.component';
     DashboardComponent,
     RecruiterPageComponent,
     SlotListComponent,
-    CandidateComponent
+    CandidateComponent,
+    NavbarComponent,
+    ProvideslotsComponent,
+    IncentivesComponent,
+    ViewslotsComponent,
+    //IncentivesComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -29,7 +44,10 @@ import { CandidateComponent } from './candidate/candidate.component';
     SocialLoginModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialExampleModule
+    MaterialExampleModule,
+    
+    
+
 
   ],
   providers: [

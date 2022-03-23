@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<app-navbar></app-navbar>
+<body class="vh-100">
+  <div class="mx-auto col-5" style="margin-top: 10rem;">
+    <h1 class="text-center mb-3 text-secondary">Choose Date and Time</h1>
+
+     <!-- <form>
+      <input class="form-control" type="datetime-local" placeholders="Select DateTime">
+    </form>  -->
+     <form>
+      <label>Date:</label>
+      <input class="form-control" type="date" id="inter" placeholders="Select Date" min="" max="">
+      <label>From:</label>
+      <input class="form-control" type="time" id="tim"   placeholders="Select Time">
+      <label>Till:</label>
+      <input class="form-control" type="time" id="tim1"   placeholders="Select Time">
+      
+     
+     <!-- Group of default radios - option 2 -->
+     <!-- <div class="custom-control custom-radio"> -->
+       <br>
+       
+       <div class="abc">
+       <input type="radio" class="radio-container" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
+       
+       <label class="custom-control-label" for="defaultGroupExample2" style="font-size: 20px;">Recurring</label>
+       <input type="radio" class="radio-container" id="defaultGroupExample3" name="groupOfDefaultRadios">
+       <label class="custom-control-label" for="defaultGroupExample3" style="font-size: 20px;">Instant</label>
+       </div>
+       <div class="abc">
+       
+       </div>
+     <!-- </div> -->
+     
+     <!-- custom-control-input -->
+     <!-- Group of default radios - option 3 -->
+     <div class="custom-control custom-radio">
+       
+     </div>
+      <!-- <label>Till:</label>
+      <input class="form-control" type="date" id="inter1" placeholders="Select DateTime" min="" max=""> -->
+      <div class="containe">
+       <button type="submit"  >Submit</button>
+      </div>
+      
+    </form>
+  </div> 
+  
+   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
+
+   <script>
+    
+   
+   
+
+
+
+
+  </script>
+</body>
+</html> 
