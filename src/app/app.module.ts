@@ -12,13 +12,15 @@ import { RecruiterPageComponent } from './recruiter/recruiter-page/recruiter-pag
 import { SlotListComponent } from './slot-list/slot-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from './material.module';
+import { CandidateComponent } from './candidate/candidate.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
     RecruiterPageComponent,
-    SlotListComponent
+    SlotListComponent,
+    CandidateComponent
   ],
   imports: [
     BrowserModule,
