@@ -5,25 +5,31 @@ import {HttpClientModule} from '@angular/common/http';
 import { GoogleLoginProvider, SocialLoginModule } from 'angularx-social-login';
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
-
- import { SocialAuthServiceConfig } from 'angularx-social-login';
+import { SocialAuthServiceConfig } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RecruiterPageComponent } from './recruiter/recruiter-page/recruiter-page.component';
-
+import { SlotListComponent } from './slot-list/slot-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialExampleModule } from './material.module';
+import { CandidateComponent } from './candidate/candidate.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    RecruiterPageComponent
+    RecruiterPageComponent,
+    SlotListComponent,
+    CandidateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     SocialLoginModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialExampleModule
 
   ],
   providers: [
