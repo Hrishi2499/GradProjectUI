@@ -1,0 +1,79 @@
+<app-navbar></app-navbar>
+<div class="center">
+    <p class="topspace"></p>
+    <table>
+        <tr>
+            <td>
+                <!-- SKILL FORM -->
+                <form #f="ngForm" (ngSubmit)="onSubmit()">
+                 <h3>Add Skill Page</h3>
+                 <div ngModelGroup = "userData"></div>
+                    <div class="form-group">
+                        <!-- FIELD TO ADD SKILL -->
+                        <label>Skill</label>
+                        <label class="validation-error hide" id="skillNamevalidationError">This field is required</label>
+                        <input type="text" name="skillName" id="skillName" placeholder="Enter you skill" ngModel>
+                    </div>
+                    <div>
+                        <!-- FIELD TO ADD EXPERIENCE IN YAERS (input field accepts only numbers) -->
+                        <label>Experience in Years</label>
+                        <label class="validation-error hide" id="experiencevalidationError">This field is required</label>
+                        <input type="number" name="experience" id="experience" placeholder="Enter the experience" ngModel>
+                    </div>
+                    <div id="skillType">
+                        <!-- RADIO BUTTONS FOR SELECTING SKILL TYPE such as Primary, secondary or others -->
+                        <label>Skill Type</label>
+                        <br>
+                        <div>
+                            <input type="radio" name="skillType" value="Primary Skill" id="primarySkill" ngModel>
+                            <label for="primarySkill">Primary Skill</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="skillType" value="Secondary Skill" id="secondarySkill" ngModel>
+                            <label for="secondarySkill">Secondary Skill</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="skillType" value="Other Skill" id="otherSkill" ngModel>
+                            <label for="otherSkill">Other Skill</label>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit"
+                    [disabled]="!f.valid">Submit</button>
+                </form>  
+            </td>
+            <td>
+                <div>
+                    <!--Nested Table-->
+                    <table class="list" id="stdlist" style="background-color: #C2976D;">
+                        <!--Table Head-->
+                        <thead>
+                            <tr>
+                                <th class="tableHead">Skill</th>
+                                <th class="tableHead">Experience</th>
+                                <th class="tableHead">Skill Type</th>
+                            </tr>
+                        </thead>
+                        <!--Table Body-->
+                        <tbody >
+                            <!--Data available in database-->
+                            <tr *ngFor="let post of posts">
+                                <td>{{post.skill_name}}</td>
+                                <td>{{post.experience}}</td>
+                                <td>{{post.skill_type}}</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <!-- Inputed values -->
+                            <tr *ngFor="let user of formData">
+                                <td>{{user.skillName}}</td>
+                                <td>{{user.experience}}</td>
+                                <td>{{user.skillType}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+      </table>
+     
+    </div>

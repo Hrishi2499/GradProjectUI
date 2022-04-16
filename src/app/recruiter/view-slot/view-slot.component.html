@@ -1,0 +1,26 @@
+
+<h2 class = "center" style = "color:rgb(3, 0, 0)">Available Slots</h2>
+<button type="button" (click)="fileDownload()">click to download</button>
+<div class="center">
+    <table class="list" id="stdlist" style="background-color: #000000;">
+        <!--Table Head-->
+        <thead>
+            <tr>
+                <th class="tableHead" style = "color:white">EMP ID</th>
+                <th class="tableHead" style = "color:white">Date</th>
+                <th class="tableHead" style = "color:white">From Time</th>
+                <th class="tableHead" style = "color:white">Till Time</th>
+            </tr>
+        </thead>
+        <!--Table Body-->
+        <tbody >
+            <!-- Inputed values -->
+            <tr *ngFor="let user of users">
+                <td style = "color:white">{{user.Inter_id}}</td>
+                <td style = "color:white">{{user.date1}}</td>
+                <td style = "color:white">{{user.tilltime}}</td>
+                <td style = "color:white">{{user.fromtime}}</td>
+            </tr>
+           </tbody>
+    </table>
+</div>

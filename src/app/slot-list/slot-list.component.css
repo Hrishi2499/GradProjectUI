@@ -1,27 +1,27 @@
 table {
-    width: 100%;
-    font-family: Robotomono;
-    text-decoration-color: white;
-    background-color: black;
-  }
-  td {
-    color: white;
-    text-decoration-color: white;
+  width: 115%;
+  font-family: Robotomono;
+  text-decoration-color: white;
+  background-color: rgb(14, 62, 81);
+ 
+}
+td {
+  color: white;
+  text-decoration-color: white;
 
-  }
-  tr {
-    color: white;
-    text-decoration-color: white;
+}
+tr {
+  color: white;
+  text-decoration-color: white;
 
-  }
-  th{
-    color: white;
-    text-decoration-color: white;
+}
+th{
+  color: white;
+  text-decoration-color: white;
 
-  }
-  mat-paginator {
-    background-color: black;
-    width: 100%;
-    color: white;
-  }
-  
+}
+mat-paginator {
+  background-color: rgb(175, 225, 208);
+  width: 115%;
+  color: white;
+}

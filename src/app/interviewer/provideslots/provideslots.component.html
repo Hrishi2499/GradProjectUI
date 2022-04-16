@@ -9,32 +9,58 @@
 </head>
 <app-navbar></app-navbar>
 <body class="vh-100">
+<!-- <div style="text-align:center">
+  <h1>{{message}}</h1>
+</div> -->
+<div *ngIf="alert" class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success!</strong> Slot has been added succesfully.
+  <button (click)="closeAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
   <div class="mx-auto col-5" style="margin-top: 10rem;">
     <h1 class="text-center mb-3 text-secondary">Choose Date and Time</h1>
 
      <!-- <form>
       <input class="form-control" type="datetime-local" placeholders="Select DateTime">
     </form>  -->
-     <form>
+     <form  [formGroup]="addresto">
+       <!-- <mat-form-field> -->
       <label>Date:</label>
-      <input class="form-control" type="date" id="inter" placeholders="Select Date" min="" max="">
+      <input class="form-control" type="date" [(ngModel)]="provide.date1" name="inter" id="inter" placeholders="Select Date" formControlName="Date"  min="" max="" required>
+      
+   
+    <!-- </mat-form-field> -->
+    <!-- <mat-form-field> -->
       <label>From:</label>
-      <input class="form-control" type="time" id="tim"   placeholders="Select Time">
+      <input class="form-control" type="time" [(ngModel)]="provide.fromtime" name="tim" id="tim"   placeholders="Select Time" formControlName="From" required>
+      <!-- <mat-error *ngIf="From.hasError('required')">
+        From time is required.
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field> -->
       <label>Till:</label>
-      <input class="form-control" type="time" id="tim1"   placeholders="Select Time">
+      <input class="form-control" type="time" [(ngModel)]="provide.tilltime" name="tim1" id="tim1"   placeholders="Select Time" formControlName="Till" required>
+      <!-- <mat-error *ngIf="Till.hasError('required')">
+        Till Time is required.
+      </mat-error>
+    </mat-form-field> -->
       
      
      <!-- Group of default radios - option 2 -->
      <!-- <div class="custom-control custom-radio"> -->
        <br>
+       <span id="mess"></span>
        
-       <div class="abc">
+       <!-- <div class="abc">
        <input type="radio" class="radio-container" id="defaultGroupExample2" name="groupOfDefaultRadios" checked>
        
        <label class="custom-control-label" for="defaultGroupExample2" style="font-size: 20px;">Recurring</label>
        <input type="radio" class="radio-container" id="defaultGroupExample3" name="groupOfDefaultRadios">
        <label class="custom-control-label" for="defaultGroupExample3" style="font-size: 20px;">Instant</label>
-       </div>
+       </div> -->
        <div class="abc">
        
        </div>
@@ -47,8 +73,11 @@
      </div>
       <!-- <label>Till:</label>
       <input class="form-control" type="date" id="inter1" placeholders="Select DateTime" min="" max=""> -->
+   
       <div class="containe">
-       <button type="submit"  >Submit</button>
+       <!-- <button type="submit"  (click)="slotprovid()" >Submit</button> -->
+       <button  class="btn btn-success" type="submit" name="submit_reg" value="Submit" (click)="slotprovid()">Submit</button>
+
       </div>
       
     </form>
@@ -56,9 +85,9 @@
   
    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
 
+
    <script>
     
-   
    
 
 

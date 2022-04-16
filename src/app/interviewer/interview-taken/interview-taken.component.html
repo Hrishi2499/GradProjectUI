@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="center">
+    <h1>Interview History</h1>
+  </div>
+  <h2 class ="text-centre">EMPLOYEE NAME:- {{userDetails?.name}}({{userDetails?.id}})</h2>
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="RecordId">
+      <th mat-header-cell *matHeaderCellDef>  Record Id</th>
+      <td mat-cell *matCellDef="let element"> {{element.RecordId}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="ApplicantName">
+      <th mat-header-cell *matHeaderCellDef> ApplicantName </th>
+      <td mat-cell *matCellDef="let element"> {{element.ApplicantName}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="ApplicantEmail">
+      <th mat-header-cell *matHeaderCellDef> Applicant Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.ApplicantEmail }} </td>
+    </ng-container>
+    <ng-container matColumnDef="JobStage">
+      <th mat-header-cell *matHeaderCellDef> Job Stage </th>
+      <td mat-cell *matCellDef="let element"> {{element.JobStage}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="EvaluationDateTime">
+      <th mat-header-cell *matHeaderCellDef> Evaluation Date-Time </th>
+      <td mat-cell *matCellDef="let element"> {{element.EvaluationDateTime}} </td>
+    </ng-container>
+ 
+ 
+ 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+ 
+ 
+ 

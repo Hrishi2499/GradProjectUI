@@ -7,39 +7,41 @@
     <title>recruiter</title>
 </head>
 <body>
-
+ 
     <div class="container" id="bodyContainer">
+       
         <div class="container" id="navigationContainer">
             <button id="backButton">Back</button>
             <button id="logoutButton">LOGOUT</button>
         </div>
-
+ 
         <div class="container" id="usernameContainer">
             <div class="text" id="recruiterPageHeading">Recruiter PROFILE</div>
             <div class="text" id="usernameText">HELLO USERNAME,</div>
         </div>
-    
+   
         <div class="container" id="fourButtonsContainer">
-            <button class="customText" id="profileEditButton">Profile</button>
+
+            <button class="customText" id="profileEditButton" >Filter</button>
             <button class="customText" id="downloadSlotsButton">Download Slot</button>
             <button class="customText" id="slotViewButton">Slot view</button>
             <a href="\candidate"><button class="customText" id="downloadCandidateDetailsButton">View Candidate Details</button></a>
         </div>
-    
+   
         <div class="image" id="profileImageContainer">
             <img src="../../../assets/images/userImage.png" alt="user profile image" id="profileImage">
         </div>
-    
-        <div class="container" id="filterContainer">
+   
+        <!-- <!-- <div class="container" id="filterContainer">
             <div class="container" >
                 <select class="customText" id="skillDropdown" >
                     <option disabled hidden selected>SKILL</option>
                     <option value="JAVA">JAVA</option>
                     <option value="JAVASCRIPT">JAVASCRIPT</option>
                 </select>
-            </div>
-    
-            <div class="container" >
+            </div> -->
+
+            <!-- <div class="container" >
                 <select class="customText" id="roundDropdown" >
                     <option disabled hidden selected>ROUND</option>
                     <option value="ROUND 1">ROUND 1</option>
@@ -48,25 +50,29 @@
                     <option value="ROUND 4">ROUND 4</option>
                 </select>
             </div>
-    
+   
             <div class="container" id="fromContainer">
                 <div class="text" id="calendarLabel">From</div>
-                <input class="dateClass" type="date" id="fromDate" > 
+                <input class="dateClass" type="date" id="fromDate" >
             </div>
-
+ 
             <div class="container" id="toContainer">
                 <div class="text" id="calendarLabel">To</div>
-                <input class="dateClass" type="date" id="toDate" > 
+                <input class="dateClass" type="date" id="toDate" >
             </div>
-
-            
             <button class="customText" id="searchButton" >Search</button>
-        </div>
-
+           
+            <div class="container" id="printFilterContainer"></div>
+ 
+        </div> -->
+        <hr size="150px" width="15px" color="white">
         <div class="container" id="lineSeparator"></div>
-        <div class="container" id="printFilterContainer"></div>
-
+ 
+    <!-- <app-slot-list></app-slot-list> -->
+     
+       
     </div>
-<app-slot-list></app-slot-list>
+ 
 </body>
 </html>
+
